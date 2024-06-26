@@ -20,7 +20,7 @@
    <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="NewTaskButton">
     <property name="geometry">
      <rect>
       <x>100</x>
@@ -53,7 +53,7 @@
       <height>521</height>
      </rect>
     </property>
-    <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,0" columnstretch="0,0,0">
+    <layout class="QGridLayout" name="taskGrid" rowstretch="0,0" columnstretch="0,0,0">
      <property name="sizeConstraint">
       <enum>QLayout::SetFixedSize</enum>
      </property>
@@ -67,7 +67,7 @@
       <number>7</number>
      </property>
      <item row="0" column="1">
-      <widget class="QGroupBox" name="groupBox">
+      <widget class="QGroupBox" name="task2">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
          <horstretch>0</horstretch>
@@ -92,7 +92,7 @@
        <property name="title">
         <string>Task</string>
        </property>
-       <widget class="QDateTimeEdit" name="dateTimeEdit_4">
+       <widget class="QDateTimeEdit" name="dateTime2">
         <property name="geometry">
          <rect>
           <x>100</x>
@@ -114,7 +114,7 @@
          <bool>true</bool>
         </property>
        </widget>
-       <widget class="QTextEdit" name="textEdit_4">
+       <widget class="QTextEdit" name="taskText2">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -127,7 +127,7 @@
          <string>Describe task...</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_5">
+       <widget class="QPushButton" name="deleteButton2">
         <property name="geometry">
          <rect>
           <x>180</x>
@@ -140,7 +140,7 @@
          <string>Delete</string>
         </property>
        </widget>
-       <widget class="QCheckBox" name="checkBox_3">
+       <widget class="QCheckBox" name="compCheck2">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -156,7 +156,7 @@
       </widget>
      </item>
      <item row="0" column="2">
-      <widget class="QGroupBox" name="groupBox_2">
+      <widget class="QGroupBox" name="task3">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
          <horstretch>0</horstretch>
@@ -182,12 +182,12 @@
         <string>Task</string>
        </property>
        <property name="checkable">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="checked">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
-       <widget class="QDateTimeEdit" name="dateTimeEdit_2">
+       <widget class="QDateTimeEdit" name="dateTime3">
         <property name="geometry">
          <rect>
           <x>100</x>
@@ -209,7 +209,7 @@
          <bool>true</bool>
         </property>
        </widget>
-       <widget class="QTextEdit" name="textEdit_2">
+       <widget class="QTextEdit" name="taskText3">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -222,7 +222,7 @@
          <string>Describe task...</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_3">
+       <widget class="QPushButton" name="deleteButton3">
         <property name="geometry">
          <rect>
           <x>180</x>
@@ -235,7 +235,7 @@
          <string>Delete</string>
         </property>
        </widget>
-       <widget class="QCheckBox" name="checkBox_4">
+       <widget class="QCheckBox" name="compCheck3">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -251,7 +251,7 @@
       </widget>
      </item>
      <item row="1" column="0">
-      <widget class="QGroupBox" name="groupBox_3">
+      <widget class="QGroupBox" name="task4">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
          <horstretch>0</horstretch>
@@ -276,7 +276,7 @@
        <property name="title">
         <string>Task</string>
        </property>
-       <widget class="QDateTimeEdit" name="dateTimeEdit_6">
+       <widget class="QDateTimeEdit" name="dateTime4">
         <property name="geometry">
          <rect>
           <x>100</x>
@@ -298,7 +298,7 @@
          <bool>true</bool>
         </property>
        </widget>
-       <widget class="QTextEdit" name="textEdit_6">
+       <widget class="QTextEdit" name="taskText4">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -311,7 +311,7 @@
          <string>Describe task...</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_7">
+       <widget class="QPushButton" name="deleteButton4">
         <property name="geometry">
          <rect>
           <x>180</x>
@@ -324,7 +324,7 @@
          <string>Delete</string>
         </property>
        </widget>
-       <widget class="QCheckBox" name="checkBox_5">
+       <widget class="QCheckBox" name="compCheck4">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -340,7 +340,7 @@
       </widget>
      </item>
      <item row="0" column="0">
-      <widget class="QGroupBox" name="taskBox">
+      <widget class="QGroupBox" name="task1">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
          <horstretch>0</horstretch>
@@ -368,7 +368,7 @@
        <property name="alignment">
         <set>Qt::AlignJustify|Qt::AlignVCenter</set>
        </property>
-       <widget class="QDateTimeEdit" name="dateTimeEdit">
+       <widget class="QDateTimeEdit" name="dateTime1">
         <property name="geometry">
          <rect>
           <x>100</x>
@@ -389,8 +389,11 @@
         <property name="calendarPopup">
          <bool>true</bool>
         </property>
+        <property name="timeSpec">
+         <enum>Qt::LocalTime</enum>
+        </property>
        </widget>
-       <widget class="QTextEdit" name="textEdit">
+       <widget class="QTextEdit" name="taskText1">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -403,7 +406,7 @@
          <string>Describe task...</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="deleteButton1">
         <property name="geometry">
          <rect>
           <x>180</x>
@@ -416,7 +419,7 @@
          <string>Delete</string>
         </property>
        </widget>
-       <widget class="QCheckBox" name="checkBox_2">
+       <widget class="QCheckBox" name="compCheck1">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -442,9 +445,9 @@
       <height>601</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
+    <layout class="QVBoxLayout" name="compTaskBox">
      <item>
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="compTaskLabel">
        <property name="font">
         <font>
          <family>Georgia</family>
@@ -472,14 +475,14 @@
       </widget>
      </item>
      <item>
-      <widget class="QListWidget" name="listWidget">
+      <widget class="QListWidget" name="compTaskList">
        <property name="sortingEnabled">
         <bool>false</bool>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_4">
+      <widget class="QPushButton" name="compTaskClr">
        <property name="font">
         <font>
          <pointsize>10</pointsize>
@@ -495,7 +498,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QGroupBox" name="groupBox_4">
+   <widget class="QGroupBox" name="tasksLeftGroup">
     <property name="geometry">
      <rect>
       <x>480</x>
@@ -507,7 +510,7 @@
     <property name="title">
      <string/>
     </property>
-    <widget class="QComboBox" name="comboBox">
+    <widget class="QComboBox" name="dropdownList">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -521,6 +524,14 @@
        <pointsize>9</pointsize>
       </font>
      </property>
+     <property name="currentText">
+      <string>Total tasks todo:</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>Total tasks todo:</string>
+      </property>
+     </item>
      <item>
       <property name="text">
        <string>Tasks due today :</string>
@@ -528,16 +539,11 @@
      </item>
      <item>
       <property name="text">
-       <string>Total Tasks due :</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Completed Tasks :</string>
+       <string>Completed tasks :</string>
       </property>
      </item>
     </widget>
-    <widget class="QSpinBox" name="spinBox">
+    <widget class="QSpinBox" name="numDisplay">
      <property name="geometry">
       <rect>
        <x>190</x>
@@ -577,7 +583,7 @@ background-color: rgb(100,200,100);
      <x>0</x>
      <y>0</y>
      <width>1104</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
